@@ -1,0 +1,14 @@
+#In AWS management console-->ECR-->create a repository
+
+# Tag the image for AWS ECR
+
+# docker tag hello-world:latest <your-aws-account-id>.dkr.ecr.<region>.amazonaws.com/hello-world:latest
+docker tag hello-world:latest 924000655326.dkr.ecr.ap-south-1.amazonaws.com/hello-world:latest
+
+# Authenticate Docker to your Amazon ECR registry
+#aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <your-aws-account-id>.dkr.ecr.<region>.amazonaws.com
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 924000655326.dkr.ecr.ap-south-1.amazonaws.com
+
+# Push the Docker image to ECR
+#docker push <your-aws-account-id>.dkr.ecr.<region>.amazonaws.com/hello-world:latest
+docker push 924000655326.dkr.ecr.ap-south-1.amazonaws.com/hello-world:latest
