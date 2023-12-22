@@ -1,0 +1,2 @@
+#Build Docker Imaage
+docker build -t hello-world .
