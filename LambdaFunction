@@ -1,1 +1,6 @@
-#
+#In AWS management console --> lambda --> create function --> select container image --> name the function --> enter the AWS ECR URI --> browse image -->click create function
+
+#In lambda console --> test --> click on test
+#Using AWS CLI to invoke the lambda function
+#aws lambda invoke --function-name YourLambdaFunctionName output.txt
+aws lambda invoke --function-name TestingFile output.txt
